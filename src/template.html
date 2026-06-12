@@ -6,6 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <form action="submit" method="get" id="formulary">
+        <h1>Weather App</h1>
+        <label for="location">location 
+        <input type="text" name="location" id="location" placeholder="Enter location" required>
+        </label>
+        <label for="lang">Language
+            <input type="text" name="lang" id="lang" placeholder="Enter language, e.g.:`en`" pattern="[a-z]{2}" required>
+        </label>
+        <label for="measure">Measurement:
+            <input type="radio" name="measure" id="metric" value="metric" checked>
+            <label for="metric">Metric</label>
+            <input type="radio" name="measure" id="us" value="us">
+            <label for="us">US</label>
+            <input type="radio" name="measure" id="uk" value="uk">
+            <label for="uk">UK</label>
+        </label>
+        <button type="submit" id="submit">Get Weather</button>
+        <div id="weather-info" class="hidden"></div>
+    </form>
 </body>
 </html>
